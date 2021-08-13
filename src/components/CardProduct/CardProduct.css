@@ -1,0 +1,54 @@
+.SkillsImgs{
+    width: 60px;
+    height: 30px;
+}
+.SkillsDates{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.Jobs{
+    padding: 4%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.SkillsImgsCuadrado{
+    margin: 0 2%;
+    width: 30px;
+    height: 30px;
+}
+.SkillsCard{
+    width: 30rem;
+}
+.cardJob{
+    width: 21rem;
+    font-family: 'Chakra Petch', sans-serif;
+    text-align: center;
+}
+.cardJob:hover {
+  transform: scale(1.05);
+  transform-origin: center;
+  transition: 0.5s;
+  box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.301);
+}
+@media (max-Width: 780px){
+    .Jobs{
+        width: 100%;
+        padding: 0%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: column;
+    }
+    .cardJob{
+        width: 15rem;
+        font-family: 'Chakra Petch', sans-serif;
+        text-align: center;
+    }
+    .SkillsCard{
+        width: 10rem;
+    }
+}

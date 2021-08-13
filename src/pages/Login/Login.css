@@ -1,0 +1,115 @@
+.FondoDeForm {
+  min-height: 570px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-shadow: 10px 10px 10px #000000;
+}
+.login {
+  margin: 0% 0px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.FormLogin {
+  text-shadow: 5px 5px 8px #000000;
+  color: rgb(29, 28, 28);
+  width: 28%;
+  padding: 200px 3%;
+}
+.FormRegister {
+  text-shadow: 5px 5px 8px #000000;
+  color: rgb(117, 116, 116);
+  width: 28%;
+  padding: 100px 3%;
+}
+
+@media (max-width: 780px) {
+  .FondoDeForm {
+    padding-top: 0%;
+    min-height: 100vh;
+  }
+  .login {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .FormLogin {
+    min-height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 160px 3%;
+  }
+  .FormRegister {
+    min-height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 110px 3%;
+  }
+}
+
+
+.About {
+  background: url(https://fotografias.lasexta.com/clipping/cmsimages01/2015/06/05/80BB930C-1D6B-4649-88DC-96A6F9491EE5/default.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: local;
+  text-align: center;
+  width: 72%;
+}
+.AboutImgen {
+  padding-top: 10%;
+  min-height: 100%;
+  background: #1e1d1fcc;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.AboutText {
+  margin-top: 0%;
+  width: 70%;
+  text-shadow: 2px 4px 8px #000000;
+  color: #dad2d2;
+}
+.AboutTitulo {
+  font-family: "Zen Dots";
+}
+@media (max-width: 780px) {
+  .About {
+    margin-top: 0%;
+    width: 90%;
+    display: flex;
+    align-self: center;
+    flex-direction: column;
+  }
+  .About {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: local;
+    margin-top: 0%;
+    width: 100%;
+    display: flex;
+    align-self: center;
+    flex-direction: column;
+  }
+  .AboutImgen {
+    min-height: 100%;
+    background: #2e2d2da2;
+    padding: 12% 2%;
+    display: flex;
+    justify-content: center;
+  }
+  .AboutText {
+    margin-top: 5%;
+    width: 90%;
+    text-shadow: 2px 4px 8px #000000;
+    color: #dad2d2;
+  }
+  .AboutTitulo {
+    font-family: "Zen Dots";
+  }
+}

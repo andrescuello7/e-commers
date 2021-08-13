@@ -1,23 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+//Herramientas de uso
+import "./App.css";
+import React from "react";
+import axios from "axios";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+
+//Rutas de Pages
+import Home from "./pages/Home/Home";
+import Admin from "./pages/Admin/Admin";
+import Login from "./pages/Login/Login";
+import Register from "./pages/Register/Register";
+
+//Componentes
+import Navbar from "./components/Navbar/Navbar";
+import Footer from "./components/Footer/FooterBasico";
+axios.defaults.baseURL = "https://server-andromeda.herokuapp.com/api/";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Router>
+        <Navbar />
+        <Switch>
+          <Route path="/" exact>
+            <Home />
+          </Route>
+          <Route path="/admin">
+            <Admin />
+          </Route>
+          <Route path="/login">
+            <Login />
+          </Route>
+          <Route path="/register">
+            <Register />
+          </Route>
+        </Switch>
+        <Footer />
+      </Router>
     </div>
   );
 }
