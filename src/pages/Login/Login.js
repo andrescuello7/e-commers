@@ -1,9 +1,15 @@
+//CSS
 import "./Login.css";
+//Routes
+import UseSing from "../../useUtils/UseSing";
+//Librerias
 import { Form, Button } from "react-bootstrap";
-import axios from "axios";
-import { useState, useEffect } from "react";
 
 const Login = () => {
+  //UseStates
+  const {
+    HandleChange,
+    HandleSubmit } = UseSing()
   return (
     <div>
       <div className="FondoDeForm">
@@ -34,6 +40,7 @@ const Login = () => {
                 </div>
                 <div>
                   <input
+                    onChange={(e) => HandleChange(e)}
                     className="form-control"
                     type="email"
                     name="email"
@@ -58,6 +65,8 @@ const Login = () => {
                 </div>
                 <div>
                   <input
+                    onChange={(e) => HandleChange(e)}
+                    type="password"
                     className="form-control"
                     name="password"
                     placeholder="Password"
@@ -70,7 +79,7 @@ const Login = () => {
                 <a href="/register">No tienes cuenta?, create una cuenta</a>
               </b>
             </div>
-            <Button variant="primary" className="w-100 mt-2" type="submit">
+            <Button variant="primary" className="w-100 mt-2" type="submit" onClick={HandleSubmit}>
               <b>Sing up</b>
             </Button>
           </Form>

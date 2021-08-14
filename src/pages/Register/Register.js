@@ -1,8 +1,14 @@
+//Router
+import UseSing from "../../useUtils/UseSing";
+
+//Librerias
 import { Form, Button } from "react-bootstrap";
-import axios from "axios";
-import { useState, useEffect } from "react";
 
 const Register = () => {
+  //UseStates
+  const {
+    SingChange,
+    SingSubmit } = UseSing()
   return (
     <div>
       <div className="FondoDeForm">
@@ -33,6 +39,7 @@ const Register = () => {
                 </div>
                 <div>
                   <input
+                    onChange={(e) => SingChange(e)}
                     className="form-control"
                     type="text"
                     name="user"
@@ -50,6 +57,7 @@ const Register = () => {
                 </div>
                 <div>
                   <input
+                    onChange={(e) => SingChange(e)}
                     className="form-control"
                     type="email"
                     name="email"
@@ -74,8 +82,10 @@ const Register = () => {
                 </div>
                 <div>
                   <input
+                    onChange={(e) => SingChange(e)}
                     className="form-control"
                     name="password"
+                    type="password"
                     placeholder="Password"
                   />
                 </div>
@@ -86,7 +96,7 @@ const Register = () => {
                 <a href="/login">No tienes cuenta?, create una cuenta</a>
               </b>
             </div>
-            <Button variant="primary" className="w-100 mt-2" type="submit">
+            <Button variant="primary" onClick={SingSubmit} className="w-100 mt-2" type="submit">
               <b>Register</b>
             </Button>
           </Form>

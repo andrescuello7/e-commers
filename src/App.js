@@ -14,7 +14,7 @@ import Register from "./pages/Register/Register";
 //Componentes
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/FooterBasico";
-axios.defaults.baseURL = "https://server-andromeda.herokuapp.com/api/";
+axios.defaults.baseURL = "http://localhost:5000/api/";
 
 function App() {
   return (

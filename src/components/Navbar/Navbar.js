@@ -3,6 +3,14 @@ import { Link } from "react-router-dom";
 import "./Navbar.css";
 
 const NavbarPage = () => {
+  //Hooks de Form
+  const token = localStorage.getItem("token");
+
+  //Cerrar Session
+  const handleLogOut = () => {
+    localStorage.removeItem("token");
+    window.location.href = "/login";
+  };
   return (
     <div className="sticky-top">
       <Navbar bg="light" expand="lg">
@@ -16,9 +24,10 @@ const NavbarPage = () => {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link as={Link} to="/login">Login</Nav.Link>
-              <Nav.Link as={Link} to="/register">Register</Nav.Link>
-              <Nav.Link as={Link} to="/admin">Admin</Nav.Link>
+              {!token && <Nav.Link as={Link} to="/login">Login</Nav.Link>}
+              {!token && <Nav.Link as={Link} to="/register">Register</Nav.Link>}
+              {token && <Nav.Link as={Link} to="/admin">Admin</Nav.Link>}
+              {token && <Nav.Link as={Link} to="/login" onClick={handleLogOut}>Cerrar Session</Nav.Link>}
             </Nav>
           </Navbar.Collapse>
         </Container>

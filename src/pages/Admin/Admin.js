@@ -1,10 +1,13 @@
+//React librerias
+import { Nav } from "react-bootstrap";
+import { useState } from "react";
+//Routes
 import TableUsers from "../../components/Admin/TableUsers/TableUsers";
 import TableProductos from "../../components/Admin/TableProductos/TableProductos";
 import TableVentas from "../../components/Admin/TableVentas/TableVentas";
-import { Nav } from "react-bootstrap";
-import { useState } from "react";
 
 const Admin = () => {
+  //UseStates
   const [navAdmin, setNavAdmin] = useState("TableUsers")
   return (
     <div className="home mt-2">

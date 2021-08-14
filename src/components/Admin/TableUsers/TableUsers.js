@@ -1,8 +1,11 @@
-//import UseHome from "../../UseForm/UseHome";
-//import Portada from "../../components/Portada/Portada";
+//React librerias
 import { Table } from "react-bootstrap";
+//Routes
+import UseAdmin from "../../../useUtils/UseAdmin";
 
 const TableUsers = () => {
+    //States and Hooks
+    const { MapUsuarios } = UseAdmin();
     return (
         <div className="home mt-2">
             <Table striped bordered hover>
@@ -10,29 +13,11 @@ const TableUsers = () => {
                     <tr>
                         <th>#</th>
                         <th>Usuarios</th>
-                        <th>Last Name</th>
-                        <th>Username</th>
+                        <th>Email</th>
+                        <th>Opcions</th>
                     </tr>
                 </thead>
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td colSpan="2">Larry the Bird</td>
-                        <td>@twitter</td>
-                    </tr>
-                </tbody>
+                <tbody>{MapUsuarios}</tbody>
             </Table>
         </div>
     );
