@@ -14,7 +14,7 @@ import Register from "./pages/Register/Register";
 //Componentes
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/FooterBasico";
-axios.defaults.baseURL = "http://localhost:5000/api/";
+axios.defaults.baseURL = "https://server-commers.herokuapp.com/api/";
 
 function App() {
   return (
