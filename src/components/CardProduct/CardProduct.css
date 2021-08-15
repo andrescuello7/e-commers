@@ -33,6 +33,21 @@
   transition: 0.5s;
   box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.301);
 }
+.cardProducto{
+    width: 18rem;
+    margin-bottom: 2rem;
+    border-radius: 2rem;
+    text-align: center;
+    color: rgb(40, 45, 49);
+}
+.tituloCardProducto{
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 20px;
+}
+.formProducto{
+    margin-top: 2%;
+    width: 50%;
+}
 @media (max-Width: 780px){
     .Jobs{
         width: 100%;
@@ -44,11 +59,25 @@
         flex-direction: column;
     }
     .cardJob{
-        width: 15rem;
+        width: 17rem;
         font-family: 'Chakra Petch', sans-serif;
         text-align: center;
     }
     .SkillsCard{
         width: 10rem;
+    }
+    .formProducto{
+        width: 90%;
+    }
+    .cardProducto{
+        width: 7rem;
+        margin-bottom: 2rem;
+        border-radius: 1rem;
+        text-align: center;
+        color: rgb(40, 45, 49);
+    }
+    .tituloCardProducto{
+        font-family: 'Chakra Petch', sans-serif;
+        font-size: 12px;
     }
 }

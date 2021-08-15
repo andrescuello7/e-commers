@@ -1,3 +1,21 @@
 .home{
     min-height: 40rem;
+    margin: 0%;
+}
+.titles{
+    margin: 2%;
+    font-size: 2rem;
+    font-family: 'Patua One', cursive;
+}
+
+@media (max-Width: 780px){
+    .home{
+        min-height: 40rem;
+        margin: 0%;
+    }
+    .titles{
+        margin: 4% 2%;
+        font-size: 20px;
+        font-family: 'Patua One', cursive;
+    }
 }

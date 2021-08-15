@@ -7,17 +7,16 @@ const TableUsers = () => {
     //States and Hooks
     const { MapUsuarios } = UseAdmin();
     return (
-        <div className="home mt-2">
+        <div className="home">
             <Table striped bordered hover>
                 <thead>
-                    <tr>
-                        <th>#</th>
+                    <tr className="text-center">
+                        <th>Nº</th>
                         <th>Usuarios</th>
-                        <th>Email</th>
                         <th>Opcions</th>
                     </tr>
                 </thead>
-                <tbody>{MapUsuarios}</tbody>
+                <tbody className="text-center">{MapUsuarios}</tbody>
             </Table>
         </div>
     );

@@ -1,8 +1,12 @@
 import { Navbar, NavDropdown, Container, Nav } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
+//Routes
+import UseAdmin from "../../useUtils/UseAdmin";
 
 const NavbarPage = () => {
+  //States and Hooks
+  const { usuario } = UseAdmin();
   //Hooks de Form
   const token = localStorage.getItem("token");
 

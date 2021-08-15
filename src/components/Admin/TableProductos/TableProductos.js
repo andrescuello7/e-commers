@@ -7,17 +7,16 @@ const TableProductos = () => {
     //States and Hooks
     const { MapProductos } = UseAdmin();
     return (
-        <div className="home mt-2">
+        <div className="home">
             <Table striped bordered hover>
                 <thead>
-                    <tr>
-                        <th>#</th>
+                    <tr className="text-center">
+                        <th>Nº</th>
                         <th>Productos</th>
-                        <th>Descripcion</th>
                         <th>Opciones</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody className="text-center">
                     {MapProductos}
                 </tbody>
             </Table>

@@ -26,7 +26,7 @@ const Admin = () => {
           </div>
         </Nav>
       </div>
-      <div className="m-5">
+      <div className="">
         {navAdmin === "TableUsers" && <TableUsers />}
         {navAdmin === "TableProductos" && <TableProductos />}
         {navAdmin === "TableVentas" && <TableVentas />}
