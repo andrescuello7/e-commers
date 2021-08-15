@@ -1,8 +1,15 @@
 import axios from "axios";
-import { Spinner, Button, Card } from "react-bootstrap";
+import { Spinner, Button, Card, Modal } from "react-bootstrap";
 import { useState, useEffect } from "react";
 
 const UseAdmin = () => {
+  //States de modal
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
+  //UseStates
   const token = localStorage.getItem("token");
   const [productos, setProductos] = useState([]);
   const [usuario, setUsuario] = useState([]);
@@ -14,7 +21,7 @@ const UseAdmin = () => {
   }, [productos])
 
   useEffect(() => {
-    if(id.length !== 0){
+    if (id.length !== 0) {
       Delete()
     }
   }, [id])
@@ -129,12 +136,28 @@ const UseAdmin = () => {
     )) ||
     productos.map((data, i) => (
       <div>
-        <Card className="cardProducto mt-2">
-          <Card.Img variant="top" src={data.photo} />
-          <Card.Body>
-            <b className="tituloCardProducto">{data.titulo}</b>
-          </Card.Body>
-        </Card>
+        <div>
+          <Card className="cardProducto mt-2">
+            <Card.Img className="cardProductoPhoto" onClick={handleShow} variant="top" src={data.photo} />
+          </Card>
+        </div>
+        <div>
+          <Modal show={show} onHide={handleClose}>
+            <Modal.Header>
+              <Modal.Title>{data.titulo}</Modal.Title>
+            </Modal.Header>
+            <Card.Img className="cardProductoPhoto" onClick={handleShow} variant="top" src={data.photo} />
+            <Modal.Body>{data.contenido}</Modal.Body>
+            <Modal.Footer>
+              <Button variant="secondary" onClick={handleClose}>
+                Cerrar
+              </Button>
+              <Button variant="success" onClick={handleClose}>
+                Comprar
+              </Button>
+            </Modal.Footer>
+          </Modal>
+        </div>
       </div>
     ));
   return {
