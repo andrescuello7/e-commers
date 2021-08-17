@@ -165,11 +165,15 @@ const UseAdmin = () => {
         <div>
           {idPhotoCard === data._id &&
             <Modal show={show} onHide={handleClose}>
-              <div className="w-100 d-flex align-items-center">
-                <Card.Img className="cardProductoPhotoModal" onClick={handleShow} variant="top" src={data.photo} />
+              <div className="w-100 d-flex">
+                <div className="d-flex align-items-center text-center">
+                  <Card.Img className="cardProductoPhotoModal" onClick={handleShow} variant="top" src={data.photo} />
+                </div>
+                <div>
+                  <h4 className="m-2"><b>{data.titulo}</b></h4>
+                  <p>{data.contenido}</p>
+                </div>
               </div>
-              <h4 className="m-2"><b>{data.titulo}</b></h4>
-              <Modal.Body>{data.contenido}</Modal.Body>
               <Modal.Footer>
                 <Button variant="outline-dark" onClick={handleClose}>
                   Cerrar

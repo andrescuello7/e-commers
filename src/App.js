@@ -10,6 +10,7 @@ import Home from "./pages/Home/Home";
 import Admin from "./pages/Admin/Admin";
 import Login from "./pages/Login/Login";
 import Register from "./pages/Register/Register";
+import Compras from "./pages/Comprar/Comprar";
 
 //Componentes
 import Navbar from "./components/Navbar/Navbar";
@@ -33,6 +34,9 @@ function App() {
           </Route>
           <Route path="/register">
             <Register />
+          </Route>
+          <Route path="/compras">
+            <Compras />
           </Route>
         </Switch>
         <Footer />
