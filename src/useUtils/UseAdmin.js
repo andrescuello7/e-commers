@@ -13,6 +13,7 @@ const UseAdmin = () => {
   const token = localStorage.getItem("token");
   const [productos, setProductos] = useState([]);
   const [usuario, setUsuario] = useState([]);
+  const [userAuth, setUserAuth] = useState({});
   const [id, setId] = useState("");
 
   useEffect(() => {
@@ -21,16 +22,22 @@ const UseAdmin = () => {
   }, [productos])
 
   useEffect(() => {
+    if(userAuth !== 0){
+      AuthUsuarios()
+    }
+  }, [])
+
+  useEffect(() => {
     if (id.length !== 0) {
       Delete()
     }
   }, [id])
 
-  //Consulta de Publicaiones
-  const Publicacion = async (e) => {
+  //Consulta de Usuarios
+  const Usuarios = async (e) => {
     try {
-      const { data } = await axios.get("post");
-      setProductos(data);
+      const { data } = await axios.get("user");
+      setUsuario(data);
     } catch (error) {
       if (error) {
         console.log(error);
@@ -38,11 +45,24 @@ const UseAdmin = () => {
     }
   };
 
-  //Consulta de Usuarios
-  const Usuarios = async (e) => {
+  //Consulta Get de Usuarios
+  const AuthUsuarios = async (e) => {
     try {
-      const { data } = await axios.get("user");
-      setUsuario(data);
+      const headers = { "x-auth-token": token };
+      const { data } = await axios.get("auth", { headers });
+      setUserAuth(data.usuario);
+    } catch (error) {
+      if (error) {
+        console.log(error);
+      }
+    }
+  };
+  
+  //Consulta de Publicaiones
+  const Publicacion = async (e) => {
+    try {
+      const { data } = await axios.get("post");
+      setProductos(data);
     } catch (error) {
       if (error) {
         console.log(error);
@@ -135,24 +155,24 @@ const UseAdmin = () => {
       </div>
     )) ||
     productos.map((data, i) => (
-      <div>
+      <div key={i}>
         <div>
-          <Card className="cardProducto mt-2">
+          <div className="cardProducto mt-2">
             <Card.Img className="cardProductoPhoto" onClick={handleShow} variant="top" src={data.photo} />
-          </Card>
+          </div>
         </div>
         <div>
           <Modal show={show} onHide={handleClose}>
-            <Modal.Header>
-              <Modal.Title>{data.titulo}</Modal.Title>
-            </Modal.Header>
-            <Card.Img className="cardProductoPhoto" onClick={handleShow} variant="top" src={data.photo} />
+            <div className="w-100 d-flex align-items-center">
+              <Card.Img className="cardProductoPhotoModal" onClick={handleShow} variant="top" src={data.photo} />
+            </div>
+            <h4 className="m-2"><b>{data.titulo}</b></h4>
             <Modal.Body>{data.contenido}</Modal.Body>
             <Modal.Footer>
-              <Button variant="secondary" onClick={handleClose}>
+              <Button variant="outline-dark" onClick={handleClose}>
                 Cerrar
               </Button>
-              <Button variant="success" onClick={handleClose}>
+              <Button variant="outline-success" onClick={handleClose}>
                 Comprar
               </Button>
             </Modal.Footer>
@@ -164,7 +184,8 @@ const UseAdmin = () => {
     MapProductosEnHome,
     MapProductos,
     MapUsuarios,
-    usuario
+    usuario,
+    userAuth
   };
 };
 export default UseAdmin;

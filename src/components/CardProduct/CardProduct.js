@@ -1,15 +1,19 @@
-import { Card, Button } from "react-bootstrap"
+import { Card } from "react-bootstrap"
 import "./CardProduct.css"
 
+//Img for present
+import reloj from "../../img/reloj.jpeg"
+import ubicacion from "../../img/ubicacion.jpeg"
+import fecha from "../../img/fecha.jpeg"
 const CardProduct = () => {
     return (
         <div className="about">
-            <div className="Jobs mt-5">
+            <div className="Jobs">
                 <div>
                     <Card className="cardJob mt-2">
-                        <Card.Img variant="top" src="https://www.tremplin-numerique.org/wp-content/uploads/2020/11/La-date-de-sortie-du-Samsung-Galaxy-S21-a-fui.jpg" />
+                        <Card.Img variant="top" className="cardImg" src={ubicacion} />
                         <Card.Body>
-                            <Card.Title><b>Phones</b></Card.Title>
+                            <Card.Title><b>Productos</b></Card.Title>
                             <Card.Text>
                                 Se realiza el pedido desde cualquien dispositivo con acceso a internet, selecciona el producto y lo lleva al carrito.
                             </Card.Text>
@@ -18,9 +22,9 @@ const CardProduct = () => {
                 </div>
                 <div>
                     <Card className="cardJob mt-2">
-                        <Card.Img variant="top" src="https://www.imperiorelojes.com/wp-content/uploads/2020/03/partes-de-un-reloj.jpg" />
+                        <Card.Img variant="top" className="cardImg" src={reloj} />
                         <Card.Body>
-                            <Card.Title><b>Rollexs</b></Card.Title>
+                            <Card.Title><b>Tiempo</b></Card.Title>
                             <Card.Text>
                                 Despues selecciona su forma de pago mas conveniente y lo paga, tendra que esperar un tiempo, porque tenemos los mejores servicios de mensajeria.
                             </Card.Text>
@@ -29,7 +33,7 @@ const CardProduct = () => {
                 </div>
                 <div>
                     <Card className="cardJob mt-2">
-                        <Card.Img variant="top" src="https://blog.wildix.com/wp-content/uploads/2020/01/Quick-Tips-for-Organizing-Your-Gmail-Inbox.jpg" />
+                        <Card.Img variant="top" className="cardImg" src={fecha} />
                         <Card.Body>
                             <Card.Title><b>Llega a Casa</b></Card.Title>
                             <Card.Text>

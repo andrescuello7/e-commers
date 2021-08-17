@@ -1,4 +1,4 @@
-import { Navbar, NavDropdown, Container, Nav } from "react-bootstrap";
+import { Navbar, Container, Nav, NavDropdown, Dropdown } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 //Routes
@@ -6,7 +6,8 @@ import UseAdmin from "../../useUtils/UseAdmin";
 
 const NavbarPage = () => {
   //States and Hooks
-  const { usuario } = UseAdmin();
+  const { userAuth } = UseAdmin();
+
   //Hooks de Form
   const token = localStorage.getItem("token");
 
@@ -30,10 +31,27 @@ const NavbarPage = () => {
             <Nav className="me-auto">
               {!token && <Nav.Link as={Link} to="/login">Login</Nav.Link>}
               {!token && <Nav.Link as={Link} to="/register">Register</Nav.Link>}
-              {token && <Nav.Link as={Link} to="/admin">Admin</Nav.Link>}
-              {token && <Nav.Link as={Link} to="/login" onClick={handleLogOut}>Cerrar Session</Nav.Link>}
             </Nav>
           </Navbar.Collapse>
+          {token &&
+            <Dropdown>
+              <Dropdown.Toggle variant="light" className="d-flex" id="dropdown-basic">
+                <div>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" className="bi bi-person-fill" viewBox="0 0 16 16">
+                    <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                  </svg>
+                </div>
+                <div className="ml-5">{userAuth.user || "NameUser"}</div>
+              </Dropdown.Toggle>
+
+              <Dropdown.Menu>
+                <Dropdown.Item as={Link} to="/">Home</Dropdown.Item>
+                <Dropdown.Item as={Link} to="/admin">Admin</Dropdown.Item>
+                <Dropdown.Divider />
+                <Dropdown.Item as={Link} to="/login" onClick={handleLogOut}>Cerrar Session</Dropdown.Item>
+              </Dropdown.Menu>
+            </Dropdown>
+          }
         </Container>
       </Navbar>
     </div>

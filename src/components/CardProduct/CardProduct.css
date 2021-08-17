@@ -23,20 +23,18 @@
     width: 30rem;
 }
 .cardJob{
-    width: 21rem;
+    width: 18rem;
     font-family: 'Chakra Petch', sans-serif;
     text-align: center;
 }
-.cardJob:hover {
-  transform: scale(1.05);
-  transform-origin: center;
-  transition: 0.5s;
-  box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.301);
+.cardImg{
+    display: flex;
+    align-self: center;
+    width: 12rem;
 }
 .cardProducto{
     width: 18rem;
     margin-bottom: 2rem;
-    border-radius: 2rem;
     text-align: center;
     color: rgb(40, 45, 49);
 }
@@ -44,12 +42,16 @@
   transform: scale(1.05);
   transform-origin: center;
   transition: 0.5s;
-  box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.301);
 }
 .cardProductoPhoto{
+    width: 18rem;
+    height: 100%;
+    border-radius: 20px;
+}
+.cardProductoPhotoModal{
     width: 100%;
-    height: 200px;
-    border-radius: 2rem;
+    height: 100%;
+    border-radius: 20px;
 }
 .tituloCardProducto{
     font-family: 'Chakra Petch', sans-serif;

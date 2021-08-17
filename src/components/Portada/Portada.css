@@ -5,14 +5,11 @@
   font-family: "Poppins", sans-serif;
   background-color: black;
 }
-.logo {
-  width: 150px;
-}
 .banner {
   position: relative;
   width: 100%;
   min-height: 92vh;
-  padding: 8% 40px;
+  padding: 0% 0px;
 }
 .banner .bg {
   position: absolute;
@@ -23,24 +20,27 @@
   object-fit: cover;
 }
 .content {
-  background-color: rgba(0, 0, 0, 0.39);
   padding: 2% 3%;
   border-radius: 1rem;
   display: flex;
   flex-direction: column;
   position: relative;
   z-index: 1;
-  max-width: 550px;
+  max-width: 450px;
   color: #fff;
 }
 .movieTitle {
   max-width: 250px;
 }
 .titulo{
-  font-family: 'Permanent Marker', cursive;
+  font-family: 'Open Sans', sans-serif;
   text-align: center;
   padding: 2%;
   font-size: 44px;
+}
+.descripcion{
+  margin-top: 30px;
+  color: #fff;
 }
 @media (max-width: 780px) {
   .banner {

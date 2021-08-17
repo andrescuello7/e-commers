@@ -2,8 +2,6 @@
 import axios from "axios";
 import { Modal, Form, Button, Alert } from "react-bootstrap";
 import { useState } from "react";
-//Routes
-import UseAdmin from "../../../useUtils/UseAdmin";
 
 const TableVentas = () => {
     //Inicio de session States

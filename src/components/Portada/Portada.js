@@ -5,12 +5,12 @@ const Header = () => {
         <div className="body">
             <div className="banner">
                 <img
-                    src="https://cdn.wallpapers4k.info/file/wallpaper-coffee-coffee-pot-coffee-shop-1579429805-3840x2400.jpg"
+                    src="https://t.ipadizate.es/2019/08/fondos-semana-agosto.jpg"
                     className="bg"
                 />
                 <div className="content">
-                    <h2 className="titulo">e-commers</h2>
-                    <p className="text-light">
+                    <h2 className="titulo"><b>e-commers</b></h2>
+                    <p className="descripcion">
                         Bienvenido a{' '}
                         <b>
                             <i>e-commers</i>

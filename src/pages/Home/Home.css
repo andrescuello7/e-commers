@@ -5,9 +5,14 @@
 .titles{
     margin: 2%;
     font-size: 2rem;
-    font-family: 'Patua One', cursive;
+    font-family: 'Kanit', sans-serif;
 }
-
+.productosHome{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 90%;
+}
 @media (max-Width: 780px){
     .home{
         min-height: 40rem;
@@ -16,6 +21,6 @@
     .titles{
         margin: 4% 2%;
         font-size: 20px;
-        font-family: 'Patua One', cursive;
+        font-family: 'Kanit', sans-serif;
     }
 }
