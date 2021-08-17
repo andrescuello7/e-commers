@@ -44,7 +44,12 @@
 }
 @media (max-width: 780px) {
   .banner {
-    padding: 10% 5%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    min-height: 92vh;
+    padding: 0% 0px;
   }
   .banner .play {
     min-height: 0vh;
@@ -53,15 +58,14 @@
     padding: 0px;
   }
   .content {
-    background-color: rgba(12, 12, 12, 0.616);
-    padding: 4%;
-    border-radius: 2rem;
+    padding: 6%;
+    background-color: rgba(8, 8, 8, 0.582);
+    color: #fff;
     display: flex;
     flex-direction: column;
     position: relative;
     z-index: 1;
     max-width: 550px;
-    color: #fff;
   }
   .titulo{
     font-family: 'Permanent Marker', cursive;

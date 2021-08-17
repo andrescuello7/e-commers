@@ -44,7 +44,7 @@
   transition: 0.5s;
 }
 .cardProductoPhoto{
-    width: 18rem;
+    width: 16rem;
     height: 100%;
     border-radius: 20px;
 }
@@ -69,12 +69,17 @@
         flex-wrap: wrap;
         align-items: center;
         justify-content: space-evenly;
-        flex-direction: column;
     }
     .cardJob{
-        width: 17rem;
+        width: 10rem;
         font-family: 'Chakra Petch', sans-serif;
         text-align: center;
+        font-size: 12px;
+    }
+    .cardImg{
+        display: flex;
+        align-self: center;
+        width: 8rem;
     }
     .SkillsCard{
         width: 10rem;
@@ -83,16 +88,16 @@
         width: 90%;
     }
     .cardProducto{
-        width: 7rem;
+        width: 6rem;
         margin-bottom: 2rem;
         border-radius: 1rem;
         text-align: center;
         color: rgb(40, 45, 49);
     }
     .cardProductoPhoto{
-        width: 100%;
-        height: 90px;
-        border-radius: 1rem;
+        width: 120px;
+        height: 100%;
+        border-radius: 0rem;
     }
     .tituloCardProducto{
         font-family: 'Chakra Petch', sans-serif;

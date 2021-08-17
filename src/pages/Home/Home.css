@@ -23,4 +23,9 @@
         font-size: 20px;
         font-family: 'Kanit', sans-serif;
     }
+    .productosHome{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
 }

@@ -26,7 +26,7 @@ const CardProduct = () => {
                         <Card.Body>
                             <Card.Title><b>Tiempo</b></Card.Title>
                             <Card.Text>
-                                Despues selecciona su forma de pago mas conveniente y lo paga, tendra que esperar un tiempo, porque tenemos los mejores servicios de mensajeria.
+                                Despues selecciona su forma de pago mas conveniente y lo paga, tendra que esperar un tiempo, pero no mucho.
                             </Card.Text>
                         </Card.Body>
                     </Card>

@@ -15,6 +15,7 @@ const UseAdmin = () => {
   const [usuario, setUsuario] = useState([]);
   const [userAuth, setUserAuth] = useState({});
   const [id, setId] = useState("");
+  const [idPhotoCard, setIdPhotoCard] = useState("");
 
   useEffect(() => {
     Publicacion()
@@ -22,7 +23,7 @@ const UseAdmin = () => {
   }, [productos])
 
   useEffect(() => {
-    if(userAuth !== 0){
+    if (userAuth !== 0) {
       AuthUsuarios()
     }
   }, [])
@@ -57,7 +58,7 @@ const UseAdmin = () => {
       }
     }
   };
-  
+
   //Consulta de Publicaiones
   const Publicacion = async (e) => {
     try {
@@ -157,26 +158,28 @@ const UseAdmin = () => {
     productos.map((data, i) => (
       <div key={i}>
         <div>
-          <div className="cardProducto mt-2">
+          <div className="cardProducto mt-2" onClick={() => setIdPhotoCard(data._id)}>
             <Card.Img className="cardProductoPhoto" onClick={handleShow} variant="top" src={data.photo} />
           </div>
         </div>
         <div>
-          <Modal show={show} onHide={handleClose}>
-            <div className="w-100 d-flex align-items-center">
-              <Card.Img className="cardProductoPhotoModal" onClick={handleShow} variant="top" src={data.photo} />
-            </div>
-            <h4 className="m-2"><b>{data.titulo}</b></h4>
-            <Modal.Body>{data.contenido}</Modal.Body>
-            <Modal.Footer>
-              <Button variant="outline-dark" onClick={handleClose}>
-                Cerrar
-              </Button>
-              <Button variant="outline-success" onClick={handleClose}>
-                Comprar
-              </Button>
-            </Modal.Footer>
-          </Modal>
+          {idPhotoCard === data._id &&
+            <Modal show={show} onHide={handleClose}>
+              <div className="w-100 d-flex align-items-center">
+                <Card.Img className="cardProductoPhotoModal" onClick={handleShow} variant="top" src={data.photo} />
+              </div>
+              <h4 className="m-2"><b>{data.titulo}</b></h4>
+              <Modal.Body>{data.contenido}</Modal.Body>
+              <Modal.Footer>
+                <Button variant="outline-dark" onClick={handleClose}>
+                  Cerrar
+                </Button>
+                <Button variant="outline-success" onClick={handleClose}>
+                  Comprar
+                </Button>
+              </Modal.Footer>
+            </Modal>
+          }
         </div>
       </div>
     ));
