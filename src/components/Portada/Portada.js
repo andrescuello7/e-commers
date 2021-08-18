@@ -9,7 +9,7 @@ const Header = () => {
                     className="bg"
                 />
                 <div className="content">
-                    <h2 className="titulo"><b>e-commers</b></h2>
+                    <h2 className="titulo">Busca tu celular aqui</h2>
                     <p className="descripcion">
                         Bienvenido a{' '}
                         <b>

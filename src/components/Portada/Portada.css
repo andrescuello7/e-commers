@@ -2,7 +2,6 @@
   margin: 0%;
   padding: 0%;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
   background-color: black;
 }
 .banner {
@@ -33,12 +32,15 @@
   max-width: 250px;
 }
 .titulo{
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Zen Dots', cursive;
   text-align: center;
   padding: 2%;
-  font-size: 44px;
+  font-size: 27px;
 }
 .descripcion{
+  font-family: 'Big Shoulders Inline Text', cursive;
+  font-family: 'Libre Barcode 39 Text', cursive;
+  font-family: 'Noto Sans KR', sans-serif;
   margin-top: 30px;
   color: #fff;
 }
@@ -68,7 +70,6 @@
     max-width: 550px;
   }
   .titulo{
-    font-family: 'Permanent Marker', cursive;
     text-align: center;
     padding: 2%;
     font-size: 34px;

@@ -30,7 +30,19 @@
 .cardImg{
     display: flex;
     align-self: center;
-    width: 12rem;
+    width: 100%;
+}
+.CardTitle{
+    font-family: 'Big Shoulders Inline Text', cursive;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-family: 'Playfair Display', serif;
+    font-family: 'Russo One', sans-serif;
+}
+.CardDescripcion{
+  color: black;
+  font-family: 'Big Shoulders Inline Text', cursive;
+  font-family: 'Libre Barcode 39 Text', cursive;
+  font-family: 'Noto Sans KR', sans-serif;
 }
 .cardProducto{
     width: 18rem;
@@ -79,7 +91,7 @@
     .cardImg{
         display: flex;
         align-self: center;
-        width: 8rem;
+        width: 100%;
     }
     .SkillsCard{
         width: 10rem;

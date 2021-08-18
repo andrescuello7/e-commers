@@ -5,8 +5,11 @@
     padding: 6px 2%;
 }
 .NavbarTitulo{
-    font-size: 20px;
-    font-family: 'Zen Dots', cursive;
+    font-size: 30px;
+    font-family: 'Big Shoulders Inline Text', cursive;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-family: 'Playfair Display', serif;
+    font-family: 'Russo One', sans-serif;
 }
 .NavbarButtonUser{
     right: 0;

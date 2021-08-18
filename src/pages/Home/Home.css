@@ -3,11 +3,14 @@
     margin: 0%;
 }
 .titles{
-    margin: 2%;
-    font-size: 2rem;
-    font-family: 'Kanit', sans-serif;
+    text-align: center;
+    margin: 4%;
+    font-size: 30px;
+    font-family: 'Zen Dots', cursive;
 }
 .productosHome{
+    margin-top: 2%;
+    margin-bottom: 10%;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -21,9 +24,11 @@
     .titles{
         margin: 4% 2%;
         font-size: 20px;
-        font-family: 'Kanit', sans-serif;
+        font-family: 'Zen Dots', cursive;
     }
     .productosHome{
+        margin-top: 10%;
+        margin-bottom: 10%;
         display: flex;
         justify-content: space-around;
         flex-wrap: wrap;
