@@ -111,6 +111,11 @@
         height: 100%;
         border-radius: 0rem;
     }
+    .cardProductoPhotoModal{
+        width: 70%;
+        height: 70%;
+        border-radius: 20px;
+    }
     .tituloCardProducto{
         font-family: 'Chakra Petch', sans-serif;
         font-size: 12px;

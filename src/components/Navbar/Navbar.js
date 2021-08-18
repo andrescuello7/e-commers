@@ -27,14 +27,14 @@ const NavbarPage = () => {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              {token && <Nav.Link as={Link} to="/">home</Nav.Link>}
-              {userAuth.state && <Nav.Link as={Link} to="/admin">admin</Nav.Link>}
-              {token && <Nav.Link as={Link} to="/login" onClick={handleLogOut}>cerrar session</Nav.Link>}
+              {token && <Nav.Link as={Link} to="/" className="NavbarPages">home</Nav.Link>}
+              {userAuth.state && <Nav.Link as={Link} to="/admin" className="NavbarPages">admin</Nav.Link>}
+              {token && <Nav.Link as={Link} to="/login" onClick={handleLogOut} className="NavbarPages">cerrar session</Nav.Link>}
             </Nav>
             <Navbar id="basic-navbar-nav">
               <Nav className="me-auto">
-                {!token && <Nav.Link as={Link} to="/login">Login</Nav.Link>}
-                {!token && <Nav.Link as={Link} to="/register">Register</Nav.Link>}
+                {!token && <Nav.Link as={Link} to="/login" className="NavbarPages">Login</Nav.Link>}
+                {!token && <Nav.Link as={Link} to="/register" className="NavbarPages">Register</Nav.Link>}
               </Nav>
               {token &&
                 <Nav className="w-100 d-flex justify-content-center p-2 btn btn-outline-primary" as={Link} to="/compras">

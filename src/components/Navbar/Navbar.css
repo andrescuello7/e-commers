@@ -5,11 +5,21 @@
     padding: 6px 2%;
 }
 .NavbarTitulo{
-    font-size: 30px;
+    font-size: 28px;
     font-family: 'Big Shoulders Inline Text', cursive;
     font-family: 'Noto Sans KR', sans-serif;
     font-family: 'Playfair Display', serif;
     font-family: 'Russo One', sans-serif;
+}
+.NavbarPages{
+    font-family: 'Big Shoulders Inline Text', cursive;
+    font-family: 'Libre Barcode 39 Text', cursive;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-family: 'Playfair Display', serif;
+}
+.NavbarPages:hover{
+    color: black;
+    border-bottom: rgb(10, 130, 241) 2px solid;
 }
 .NavbarButtonUser{
     right: 0;
