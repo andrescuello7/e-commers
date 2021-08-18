@@ -27,9 +27,9 @@ const NavbarPage = () => {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              {token && <Nav.Link as={Link} to="/" className="NavbarPages">home</Nav.Link>}
-              {userAuth.state && <Nav.Link as={Link} to="/admin" className="NavbarPages">admin</Nav.Link>}
-              {token && <Nav.Link as={Link} to="/login" onClick={handleLogOut} className="NavbarPages">cerrar session</Nav.Link>}
+              {userAuth.state && <Nav.Link as={Link} to="/admin" className="NavbarPages">Admin</Nav.Link>}
+              <Nav.Link as={Link} to="/productos" className="NavbarPages">Productos</Nav.Link>
+              {token && <Nav.Link as={Link} to="/login" onClick={handleLogOut} className="NavbarPages">Cerrar session</Nav.Link>}
             </Nav>
             <Navbar id="basic-navbar-nav">
               <Nav className="me-auto">

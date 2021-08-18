@@ -11,6 +11,7 @@ import Admin from "./pages/Admin/Admin";
 import Login from "./pages/Login/Login";
 import Register from "./pages/Register/Register";
 import Compras from "./pages/Comprar/Comprar";
+import Productos from "./pages/Productos/Productos";
 
 //Componentes
 import Navbar from "./components/Navbar/Navbar";
@@ -34,6 +35,9 @@ function App() {
           </Route>
           <Route path="/register">
             <Register />
+          </Route>
+          <Route path="/productos">
+            <Productos />
           </Route>
           <Route path="/compras">
             <Compras />
