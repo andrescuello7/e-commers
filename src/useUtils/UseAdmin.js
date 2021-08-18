@@ -166,10 +166,10 @@ const UseAdmin = () => {
           {idPhotoCard === data._id &&
             <Modal show={show} onHide={handleClose}>
               <div className="w-100 d-flex">
-                <div className="d-flex align-items-center text-center">
+                <div className="d-flex align-items-center">
                   <Card.Img className="cardProductoPhotoModal" onClick={handleShow} variant="top" src={data.photo} />
                 </div>
-                <div>
+                <div className="text-left m-2">
                   <h4 className="m-2"><b>{data.titulo}</b></h4>
                   <p>{data.contenido}</p>
                 </div>
@@ -178,7 +178,7 @@ const UseAdmin = () => {
                 <Button variant="outline-dark" onClick={handleClose}>
                   Cerrar
                 </Button>
-                <Button variant="outline-success" onClick={handleClose}>
+                <Button variant="success" onClick={handleClose}>
                   Comprar
                 </Button>
               </Modal.Footer>
