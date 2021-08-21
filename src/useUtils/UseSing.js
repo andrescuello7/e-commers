@@ -5,6 +5,7 @@ const UseSing = () => {
     //Inicio de session States
     const [singIn, setSingIn] = useState({});
     const [sessionUser, setSessionUser] = useState({})
+    const [sessionAlert, setSessionAlert] = useState(false)
 
     //Vista de credenciales
     const HandleChange = (e) => {
@@ -22,6 +23,7 @@ const UseSing = () => {
             window.location.href = "/";
         } catch (error) {
             console.log(error);
+            setSessionAlert(true)
         }
     };
 
@@ -42,6 +44,7 @@ const UseSing = () => {
             window.location.href = "/";
         } catch (error) {
             console.log(error);
+            setSessionAlert(true)
         }
     };
     return {
@@ -51,6 +54,7 @@ const UseSing = () => {
         HandleChange,
         HandleSubmit,
         sessionUser,
+        sessionAlert
     };
 };
 export default UseSing;

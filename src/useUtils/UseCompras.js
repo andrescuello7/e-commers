@@ -1,27 +1,22 @@
 import axios from "axios";
-import { Spinner, Button, Card, Modal } from "react-bootstrap";
+import { Spinner, Button } from "react-bootstrap";
 import { useState, useEffect } from "react";
 
 const UseCompras = () => {
-  //States de modal
-  const [show, setShow] = useState(false);
-
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
-
   //UseStates
   const token = localStorage.getItem("token");
   const [productos, setProductos] = useState([]);
 
   useEffect(() => {
-    ComprasUser()
+      ComprasUser()
   }, [])
 
   //Consulta de Publicaiones
   const ComprasUser = async (e) => {
     try {
-      const { data } = await axios.get("post");
-      setProductos(data);
+      const headers = { "x-auth-token": token };
+      const { data } = await axios.get("auth", { headers });
+      setProductos(data.usuario.compras);
     } catch (error) {
       if (error) {
         console.log(error);
@@ -57,7 +52,8 @@ const UseCompras = () => {
       </tr>
     ));
   return {
-    MapCompras
+    MapCompras,
+    productos
   };
 };
 export default UseCompras;

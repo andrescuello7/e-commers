@@ -8,7 +8,8 @@ const Register = () => {
   //UseStates
   const {
     SingChange,
-    SingSubmit } = UseSing()
+    SingSubmit,
+    sessionAlert } = UseSing()
   return (
     <div>
       <div className="FondoDeForm">
@@ -45,6 +46,7 @@ const Register = () => {
                     name="user"
                     placeholder="User"
                   />
+                  {sessionAlert === true && <div className="text-danger">Vuelva a cargar su usuario!</div>}
                 </div>
               </div>
             </Form.Group>
@@ -63,6 +65,7 @@ const Register = () => {
                     name="email"
                     placeholder="Email"
                   />
+                  {sessionAlert === true && <div className="text-danger">Vuelva a cargar su email!</div>}
                 </div>
               </div>
             </Form.Group>
@@ -88,6 +91,7 @@ const Register = () => {
                     type="password"
                     placeholder="Password"
                   />
+                  {sessionAlert === true && <div className="text-danger">Vuelva a poner su contraseña</div>}
                 </div>
               </div>
             </Form.Group>

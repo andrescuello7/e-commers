@@ -14,8 +14,11 @@ const UseAdmin = () => {
   const [productos, setProductos] = useState([]);
   const [usuario, setUsuario] = useState([]);
   const [userAuth, setUserAuth] = useState({});
+
+  //Id de user and cards
   const [id, setId] = useState("");
   const [idPhotoCard, setIdPhotoCard] = useState("");
+  const [idCard, setIdCard] = useState("");
 
   useEffect(() => {
     Publicacion()
@@ -23,16 +26,17 @@ const UseAdmin = () => {
   }, [productos])
 
   useEffect(() => {
-    if (userAuth !== 0) {
-      AuthUsuarios()
-    }
+    AuthUsuarios()
   }, [])
 
   useEffect(() => {
     if (id.length !== 0) {
       Delete()
     }
-  }, [id])
+    if (idCard.length !== 0) {
+      IdPublicacion()
+    }
+  }, [id, idCard])
 
   //Consulta de Usuarios
   const Usuarios = async (e) => {
@@ -64,6 +68,30 @@ const UseAdmin = () => {
     try {
       const { data } = await axios.get("post");
       setProductos(data);
+    } catch (error) {
+      if (error) {
+        console.log(error);
+      }
+    }
+  };
+
+  //Consulta de Publicaiones
+  const IdPublicacion = async (e) => {
+    const headers = { "x-auth-token": token };
+    try {
+      const { data } = await axios.get(`post/usuario/${idCard}`);
+      const datos = {
+        "compras": {
+          "contenido": data[0].contenido,
+          "photo": data[0].photo,
+          "precio": 1000,
+          "titulo": data[0].titulo
+        }
+      }
+      if(datos !== 0){
+        await axios.post(`/user/compra/${userAuth._id}`, datos, { headers });
+        localStorage.setItem("carrito", true);
+      }
     } catch (error) {
       if (error) {
         console.log(error);
@@ -164,10 +192,16 @@ const UseAdmin = () => {
         </div>
         <div>
           {idPhotoCard === data._id &&
-            <Modal show={show} onHide={handleClose}>
+            <Modal
+              show={show}
+              onHide={handleClose}
+            >
               <div className="w-100 d-flex">
                 <div className="d-flex align-items-center">
-                  <Card.Img className="cardProductoPhotoModal" onClick={handleShow} variant="top" src={data.photo} />
+                  <Card.Img className="cardProductoPhotoModal"
+                    onClick={handleShow}
+                    variant="top"
+                    src={data.photo} />
                 </div>
                 <div className="text-left m-2">
                   <h4 className="m-2"><b>{data.titulo}</b></h4>
@@ -178,8 +212,8 @@ const UseAdmin = () => {
                 <Button variant="outline-dark" onClick={handleClose}>
                   Cerrar
                 </Button>
-                <Button variant="success" onClick={handleClose}>
-                  Comprar
+                <Button variant="success" onClick={() => setIdCard(data._id)}>
+                  Carrito
                 </Button>
               </Modal.Footer>
             </Modal>
@@ -192,7 +226,8 @@ const UseAdmin = () => {
     MapProductos,
     MapUsuarios,
     usuario,
-    userAuth
+    userAuth,
+    productos
   };
 };
 export default UseAdmin;

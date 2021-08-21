@@ -9,7 +9,8 @@ const Login = () => {
   //UseStates
   const {
     HandleChange,
-    HandleSubmit } = UseSing()
+    HandleSubmit,
+    sessionAlert } = UseSing()
   return (
     <div>
       <div className="FondoDeForm">
@@ -46,6 +47,7 @@ const Login = () => {
                     name="email"
                     placeholder="Enter email"
                   />
+                  {sessionAlert === true && <div className="text-danger">Vuelva a cargar su email!</div>}
                 </div>
               </div>
             </Form.Group>
@@ -71,6 +73,7 @@ const Login = () => {
                     name="password"
                     placeholder="Password"
                   />
+                  {sessionAlert === true && <div className="text-danger">Vuelva a poner su contraseña!</div>}
                 </div>
               </div>
             </Form.Group>

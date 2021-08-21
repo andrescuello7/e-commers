@@ -1,10 +1,6 @@
 import { Card } from "react-bootstrap"
 import "./CardProduct.css"
 
-//Img for present
-import reloj from "../../img/reloj.jpeg"
-import ubicacion from "../../img/ubicacion.jpeg"
-import fecha from "../../img/fecha.jpeg"
 const CardProduct = () => {
     return (
         <div className="about">
