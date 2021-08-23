@@ -16,7 +16,7 @@ const Home = () => {
         <h3 className="titles">Pasos a seguir</h3>
         <CardProduct />
       </div>
-      <h3 className="titles mt-5">Productos</h3>
+      <h3 className="titles">Productos</h3>
       <div className="w-100 d-flex justify-content-center">
         <div className="productosHome">
           {MapProductosEnHome}
