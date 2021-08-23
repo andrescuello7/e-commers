@@ -10,7 +10,7 @@ const TableVentas = () => {
         <div className="w-100 d-flex justify-content-center">
             <div className="formProducto">
                 <Form>
-                    {alert === true &&<Alert variant="danger">
+                    {alert === true && <Alert variant="danger">
                         No se subio la publicacion!, intente nuevamente
                     </Alert>}
                     <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -21,10 +21,16 @@ const TableVentas = () => {
                         <Form.Label>Descripcion</Form.Label>
                         <textarea className="form-control" name="contenido" onChange={(e) => HandleChange(e)} type="text" />
                     </Form.Group>
-                    <Form.Group className="mb-3" controlId="formBasicEmail">
-                        <Form.Label>Imagen</Form.Label>
-                        <Form.Control name="photo" onChange={(e) => HandleChange(e)} type="text" />
-                    </Form.Group>
+                    <div className="d-flex justify-content-between">
+                        <Form.Group className="mb-3" controlId="formBasicEmail">
+                            <Form.Label>Imagen</Form.Label>
+                            <Form.Control name="photo" onChange={(e) => HandleChange(e)} type="text" />
+                        </Form.Group>
+                        <Form.Group className="mb-3" controlId="formBasicEmail">
+                            <Form.Label>Precio</Form.Label>
+                            <Form.Control type="number" />
+                        </Form.Group>
+                    </div>
                     <Button variant="primary" className="w-100" onClick={HandleSubmit} type="submit">
                         Submit
                     </Button>
