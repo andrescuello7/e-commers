@@ -12,15 +12,15 @@ const Home = () => {
       <div>
         <Portada />
       </div>
-      <h3 className="titles">Productos</h3>
+      <div>
+        <h3 className="titles">Pasos a seguir</h3>
+        <CardProduct />
+      </div>
+      <h3 className="titles mt-5">Productos</h3>
       <div className="w-100 d-flex justify-content-center">
         <div className="productosHome">
           {MapProductosEnHome}
         </div>
-      </div>
-      <div>
-        <h3 className="titles">Pasos a seguir</h3>
-        <CardProduct />
       </div>
       <div className="mt-5"></div>
     </div>

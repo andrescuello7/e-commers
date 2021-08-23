@@ -22,7 +22,7 @@ const CardProduct = () => {
                         <Card.Body>
                             <Card.Title className="CardTitle">Tiempo</Card.Title>
                             <Card.Text className="CardDescripcion">
-                                Despues selecciona su forma de pago mas conveniente y lo paga, tendra que esperar un tiempo, pero no mucho.
+                                Despues selecciona su forma de pago mas conveniente y lo paga, tendra que esperar un tiempo, pero no sera mucho seguramente.
                             </Card.Text>
                         </Card.Body>
                     </Card>

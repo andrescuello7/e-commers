@@ -129,4 +129,13 @@ footer {
     display: flex;
     flex-direction: column;
   }
+  .footerInterno {
+    text-align: center;
+    font-size: 10px;
+    border-top: 1px #2e2e2e2f solid;
+    margin-top: none;
+    background: #f0efeff0;
+    padding: 1px 0%;
+    color: #443d3d;
+  }
 }
