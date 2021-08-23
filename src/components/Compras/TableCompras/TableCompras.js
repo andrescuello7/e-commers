@@ -20,6 +20,7 @@ const TableCompras = () => {
                     <tr className="text-center">
                         <th>Nº</th>
                         <th>Productos</th>
+                        <th>Precio</th>
                         <th>Opciones</th>
                     </tr>
                 </thead>

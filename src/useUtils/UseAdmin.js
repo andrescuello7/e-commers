@@ -84,7 +84,7 @@ const UseAdmin = () => {
         "compras": {
           "contenido": data[0].contenido,
           "photo": data[0].photo,
-          "precio": 1000,
+          "precio": data[0].precio,
           "titulo": data[0].titulo
         }
       }
@@ -206,6 +206,7 @@ const UseAdmin = () => {
                 <div className="text-left m-2">
                   <h4 className="m-2"><b>{data.titulo}</b></h4>
                   <p>{data.contenido}</p>
+                  <div className="d-flex"><p>Precio:{' '}</p><p className="text-success">${data.precio}</p></div>
                 </div>
               </div>
               <Modal.Footer>

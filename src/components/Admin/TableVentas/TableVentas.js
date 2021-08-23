@@ -28,7 +28,7 @@ const TableVentas = () => {
                         </Form.Group>
                         <Form.Group className="mb-3" controlId="formBasicEmail">
                             <Form.Label>Precio</Form.Label>
-                            <Form.Control type="number" />
+                            <Form.Control name="precio" onChange={(e) => HandleChange(e)} type="number" />
                         </Form.Group>
                     </div>
                     <Button variant="primary" className="w-100" onClick={HandleSubmit} type="submit">

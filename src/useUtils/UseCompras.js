@@ -35,6 +35,7 @@ const UseCompras = () => {
       <tr>
         <td>{i}</td>
         <td>{data.titulo}</td>
+        <td>{data.precio}</td>
         <td className="d-flex justify-content-evenly">
           <Button variant="outline-danger">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-trash" viewBox="0 0 16 16">
