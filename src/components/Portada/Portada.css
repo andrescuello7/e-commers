@@ -19,7 +19,7 @@
   object-fit: cover;
 }
 .content {
-  padding: 2% 3%;
+  padding: 8% 3%;
   border-radius: 1rem;
   display: flex;
   flex-direction: column;

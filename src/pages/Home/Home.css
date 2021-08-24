@@ -4,7 +4,7 @@
 }
 .titles{
     text-align: center;
-    margin: 4%;
+    margin: 2%;
     font-size: 30px;
     font-family: 'Zen Dots', cursive;
 }
@@ -22,7 +22,7 @@
         margin: 0%;
     }
     .titles{
-        margin: 18% 2%;
+        margin: 8% 2%;
         font-size: 20px;
         font-family: 'Zen Dots', cursive;
     }

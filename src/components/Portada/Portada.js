@@ -1,4 +1,5 @@
 import './Portada.css';
+import { Button } from 'react-bootstrap';
 
 const Header = () => {
     return (
@@ -20,6 +21,7 @@ const Header = () => {
                                 servicios de un editor para realizar en su foto lo que el pack que el usuario
                                 eligio, dice y a un modico precio.
                     </p>
+                    <Button variant="outline-info">Ver Productos</Button>
                 </div>
             </div>
         </div>

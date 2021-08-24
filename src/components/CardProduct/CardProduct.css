@@ -11,8 +11,14 @@
     padding: 4%;
     width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     flex-wrap: wrap;
+}
+
+.CardTitleJob{
+    width: 50%;
+    padding: 3%;
+    text-align: center;
 }
 .SkillsImgsCuadrado{
     margin: 0 2%;
@@ -23,14 +29,44 @@
     width: 30rem;
 }
 .cardJob{
-    width: 18rem;
+    margin: 3%;
+    background-image: url(https://i.ytimg.com/vi/71m3SDGa220/maxresdefault.jpg);
+    background-size: cover;
+    background-attachment: local;
+    background-repeat: no-repeat;
+    width: 250px;
+    height: 12rem;
     font-family: 'Chakra Petch', sans-serif;
-    text-align: center;
+    color: rgb(255, 252, 247);
+}
+.cardJobSecond{
+    margin: 3%;
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAaOZK0flhE0UXR0CxGNGbkOH2v6STpjP3PVlfVZdLuDMScWZSRAjHrYkw0XbMseiXWhE&usqp=CAU);
+    background-size: cover;
+    background-attachment: local;
+    background-repeat: no-repeat;
+    width: 250px;
+    height: 12rem;
+    font-family: 'Chakra Petch', sans-serif;
+    color: rgb(255, 252, 247);
+}
+.bgJob{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(15, 15, 15, 0.493);
+}
+
+.bgJob:hover{
+    transition-duration: 1s;
+    background-color: rgba(15, 15, 15, 0);
 }
 .cardImg{
     display: flex;
     align-self: center;
-    width: 100%;
+    width: 22rem;
 }
 .CardTitle{
     font-family: 'Big Shoulders Inline Text', cursive;
@@ -83,10 +119,15 @@
         justify-content: space-evenly;
     }
     .cardJob{
-        width: 7rem;
-        font-family: 'Chakra Petch', sans-serif;
-        text-align: center;
-        font-size: 7px;
+        width: 250px;
+        height: 150px;
+    }
+    .cardJobSecond{
+        width: 250px;
+        height: 150px;
+    }
+    .CardDivJob{
+        width: 90%;
     }
     .CardTitle{
         font-family: 'Big Shoulders Inline Text', cursive;
@@ -95,7 +136,7 @@
         font-family: 'Russo One', sans-serif;
         font-size: 12px;
     }
-    .cardImg{
+    .cardImg {
         display: flex;
         align-self: center;
         width: 100%;
