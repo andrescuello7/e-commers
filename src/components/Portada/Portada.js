@@ -6,7 +6,7 @@ const Header = () => {
         <div className="body">
             <div className="banner">
                 <img
-                    src="https://t.ipadizate.es/2019/08/fondos-semana-agosto.jpg"
+                    src="https://expertreviews.b-cdn.net/sites/expertreviews/files/2022/07/best_budget_smartphone_uk_2022_cheap_phones_0.jpg"
                     className="bg"
                 />
                 <div className="content">

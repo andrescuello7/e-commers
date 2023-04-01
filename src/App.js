@@ -16,7 +16,7 @@ import Productos from "./pages/Productos/Productos";
 //Componentes
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/FooterBasico";
-axios.defaults.baseURL = "https://server-comerse1.herokuapp.com/api/";
+axios.defaults.baseURL = "https://ecommers-server-production.up.railway.app/api/";
 
 function App() {
   return (
